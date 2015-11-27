@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password:
+
+development:
+  <<: *default
+  database: gymmer_development
+
+test:
+  <<: *default
+  database: gymmer_test
+
+staging:
+  <<: *default
+  database: gymmer_staging
+  username: deploy
+  password:
+
+production:
+  <<: *default
+  database: gymmer_production
+  username: deploy
+  password:
