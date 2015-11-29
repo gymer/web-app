@@ -1,0 +1,12 @@
+<%= link_to t('.add'), new_dashboard_app_path, class: 'btn btn-default pull-right' %>
+<h1 class="page-header"><%= t('.title') %></h1>
+
+<div class="row placeholders">
+  <% @apps.each do |app| %>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4><%= link_to app.name, [:dashboard, app] %></h4>
+    <span class="text-muted"><%= app.name %></span>
+  </div>
+  <% end %>
+</div>

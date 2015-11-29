@@ -1,0 +1,18 @@
+<%= form_for([:dashboard, @app], :html => {class: "b-form", autocomplete: "off"}) do |f| %>
+  <% if @app.errors.any? %>
+    <div class="alert alert-danger">
+      <% @app.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Сохранить", class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

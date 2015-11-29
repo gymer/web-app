@@ -1,0 +1,22 @@
+{
+  "name": "gymmer-web-app",
+  "homepage": "https://github.com/gymer/web-app",
+  "authors": [
+    "Alexey Krasman <akrasman@gmail.com>"
+  ],
+  "description": "web application for clients",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

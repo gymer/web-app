@@ -1,0 +1,17 @@
+<div class="pull-right">
+  <%= link_to t('.edit'), edit_dashboard_app_path(@app), class: "btn btn-primary btn-sm" %>
+  <%= link_to t('.remove'), dashboard_app_path(@app), class: "btn btn-danger btn-sm", :method => :delete %>
+</div>
+<h1 class="page-header"><%= @app.name %></h1>
+
+<div class="row">
+  <div class="col-md-8">
+    asg
+  </div>
+  <div class="col-md-4">
+    <h4>Access Tokens</h4>
+
+    <p>client: <code>72cc4bacc47099d05496</code></p>
+    <p>server: <code>155b686e9adc8490f03f</code></p>
+  </div>
+</div>
