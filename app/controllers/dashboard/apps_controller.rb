@@ -13,13 +13,23 @@ class Dashboard::AppsController < Dashboard::ApplicationController
   end
 
   def create
-    @app = App.new(app_params)
+    @app = current_user.apps.new(app_params)
 
     respond_to do |format|
       if @app.save
         format.html { redirect_to dashboard_app_url(@app), notice: t('.success') }
       else
         format.html { render :new }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @app.update(app_params)
+        format.html { redirect_to dashboard_app_url(@app), notice: t('.success') }
+      else
+        format.html { render :edit }
       end
     end
   end

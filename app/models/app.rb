@@ -1,7 +1,7 @@
 class App < ActiveRecord::Base
   include AccessTokenGenerator
   belongs_to :user
-  after_initialize :generate_access_tokens
+  after_initialize :generate_access_tokens, if: :new_record?
 
   def generate_access_tokens
     self.server_access_token = generate_access_token_for_column(:server_access_token)
