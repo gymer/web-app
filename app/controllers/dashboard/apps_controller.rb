@@ -2,7 +2,7 @@ class Dashboard::AppsController < Dashboard::ApplicationController
   before_action :set_app, only: [:show, :edit, :update, :destroy]
 
   def index
-    @apps = App.all
+    @apps = current_user.apps
   end
 
   def show
